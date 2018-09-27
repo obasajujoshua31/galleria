@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.container-fluid
+      div(style="margin-left:auto" class ="col-md-12")
+        h1= title
+        if error
+          p.text-danger= error
+        if msg 
+          p.text-success= msg
+        form(method="POST" action="/gallery" enctype="multipart/form-data")
+          div.form-group
+            h3 Upload File
+            input(type="file" name ="myImage" class="form-control")
+            br
+            button.btn.btn-primary Upload 
+        br
+
+        if file
+          img(src = file class ="img-thumbnail img-responsive")
+  

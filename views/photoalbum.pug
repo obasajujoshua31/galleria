@@ -1,0 +1,12 @@
+
+
+extends layout
+
+block content
+  div.container-fluid
+    h1= title
+    
+    each pic in files
+      div.container(style="float:left")
+        div(style="width:50%;")
+          img(src = pic class ="img-thumbnail img-responsive")
